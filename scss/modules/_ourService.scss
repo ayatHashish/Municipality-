@@ -1,0 +1,136 @@
+
+
+
+.services-card {
+    height: 36rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: $pure-white;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.9;
+      transition: opacity .2s ease-out;
+    }
+  
+    .card-heading {
+      position: absolute;
+      // inset: auto auto 8.69rem 7rem;
+      inset: auto auto 6rem 1rem;
+      margin: 0;
+      transition: inset .3s .3s ease-out;
+      font-size: 1.125rem;
+    }
+
+    .badge{
+      border-radius: 1.25rem;
+      background: #76C045;
+      width: 6.125rem;
+      height: 1.8125rem;
+      flex-shrink: 0;  
+      margin-bottom: 1.5rem;
+    
+    }
+    .title{
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 530;
+    }
+    
+    .service-dis, .view-details{
+      position: absolute;
+      opacity: 0;
+      max-width: 80%;
+      inset: auto auto 11rem 1.5rem;
+      // text-align: justify;
+      transition: opacity .3s ease-out;
+    }
+    
+    .view-details {
+      inset: 28rem auto auto 1.5rem;
+      color: #FFF;
+      font-size: 1.125rem;
+      font-weight: 530;
+
+    }
+    
+    .service-link {
+      position: absolute;
+      inset: auto 45px 40px auto;
+      opacity: 1;
+      text-decoration: none;
+      color: #FFF;
+      text-align: right;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: $brand-green;
+        transition-duration: 300ms;
+    }
+    &:hover {
+        color:$brand-green;
+        &::after {
+            width: 100%;
+        }
+    }
+
+      .material-symbols-outlined {
+        vertical-align: middle;
+      }
+      
+    }
+    
+    &:hover .card-heading {
+      // inset: auto auto 15.69rem 7rem;
+      // inset: auto auto 15.69rem 1rem;
+      inset: auto auto 25rem 1.5rem;
+      transition: inset .3s ease-out;
+    }
+    
+    &:hover .service-dis ,&:hover .view-details{
+      opacity: 1;
+      transition: opacity .5s .1s ease-in;
+    }
+    
+    &:hover img {
+      transition: opacity .3s ease-in;
+      opacity: 1;
+    }
+  
+  }
+  
+
+
+  @media only screen and (max-width: 450px) {
+    .services-card {
+
+      
+      .service-dis{
+        font-size: 0.9rem;
+        inset: auto auto 11rem 1.5rem;
+   
+      }
+      
+  
+   
+  
+    
+    }
+    
+
+}

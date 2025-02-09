@@ -1,0 +1,211 @@
+﻿footer {
+    position: relative;
+    .backtotop {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        color: $pure-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $brand-primary;
+        border-radius: 10px;
+        box-shadow: 0px 1px 21px $transparent-gold;
+        top: -65px;
+        right: 30px;
+        font-size: 2rem;
+        z-index: 10;
+        animation: floatButton 2s ease-in-out infinite;
+
+        &:hover {
+            background: $brand-green;
+
+        }
+ 
+        
+        @keyframes floatButton {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+     
+     
+    }
+    .upper-sec {
+        // border-bottom: 1px solid $brand-light-gray;
+        margin-top: 40px;
+    }
+    .logos {
+        border-top: 1px solid #b7b7b7;
+        padding: 2rem 0 0 0;
+
+      
+    }
+    h3 {
+        margin-bottom: 15px;
+        color: $brand-primary;
+        font-size: 1.25rem;
+        font-weight: 530;
+        a {
+            color: $brand-primary;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background: $brand-primary;
+                transition-duration: 300ms;
+            }
+            &:hover {
+                color: $brand-primary;
+                &::after {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        li {
+            margin-bottom: 15px;
+            a {
+                color: $brand-gray-0;
+             
+                position: relative;
+                font-size: 1rem;
+                i{
+                    color:#017366;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 0;
+                    height: 2px;
+                    background: $brand-primary;
+                    transition-duration: 300ms;
+                }
+                &:hover {
+                    color: $brand-primary;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+    .links-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    .gov-links {
+        display: flex;
+
+        a {
+            max-width: 90px;
+            margin-right: 20px;
+            display: block;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                width: 100%;
+                transition-duration: 300ms;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+
+    }
+
+ 
+}
+
+@media screen and (max-width:1199px) {
+    footer {
+        ul {
+            li {
+                a {
+                    letter-spacing: -0.25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    footer {
+        .upper-sec {
+            h3 {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    footer {
+        .first-sec {
+            .gov-links {
+                justify-content: center;
+            }
+        }
+
+        .logos {
+           
+    
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    footer {
+        .backtotop {
+            right: 10px;
+        }
+        ul {
+            li {
+                a {
+                    letter-spacing: 0;
+                }
+            }
+        }
+        .upper-sec {
+            h3 {
+                text-align: center;
+            }
+            ul {
+                li {
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+}

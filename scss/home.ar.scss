@@ -1,0 +1,15 @@
+﻿
+@import "components/variables";
+@import "components/mixins";
+// @import "_keys/plugins.common.ar";
+.ar {
+    direction: rtl ;
+    font-family: $font-base-rtl;
+}
+@import "_keys/components";
+@import "_keys/modules.common.ar";
+@import "_keys/modules.home.ar";
+
+
+
+

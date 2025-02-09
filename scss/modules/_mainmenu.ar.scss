@@ -1,0 +1,186 @@
+﻿@import "mainmenu";
+
+.ar {
+  header {
+    background: linear-gradient(200deg, #017366 -25.97%, #3F968D 24.29%, #6CBE4B 92.29%);
+    //  background: linear-gradient(200deg, #6CBE4B -25.97%, #3F968D 24.29%, #017366 92.29%);
+    background: linear-gradient(200deg, #6CBE4B -19.97%, #3F968D 38.29%, #017366 82.29%);
+    .header-section {
+      .logo-menu-wrap {
+        .first-line {
+          direction: ltr;
+        }
+        .menu-box-wrapper{
+          .second-line{
+            nav{
+                .left-box{
+                      .left-menu{
+                        li{
+                            margin: 0 15px;
+                            &:last-child {
+                              margin-left: 0;
+                            }
+                            a{
+                                &::after{
+                                    left: auto;
+                                    right: 0;
+                                }
+                            }
+                            &.dropdown-list {
+                              &:hover {
+                                a {
+                                  &::before {
+                                    bottom: -16px;
+                                  }
+                                }
+                              }
+                              .megamenu {
+                                  .menu-wrapper {
+                                      &::after {
+                                        -webkit-transform: scaleX(-1);
+                                        transform: scaleX(-1); 
+                                      }
+      
+                                  }
+                              }
+       
+                          }
+                        }
+                    }
+                }
+                .right-box{
+                    .right-menu{
+                        li{
+                    
+                            &:first-child {
+                              margin-right: 0px;
+                            }
+                            a{
+                                span{
+                                
+                                    &::after{
+                                        left: auto;
+                                        right: 0;
+                                    }
+                                    
+                                }
+                                &.arabic{
+                                    span{
+                                        left: auto;
+                                        right: -5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+          }
+      }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1399px) {
+  .ar {
+    header {
+      .header-section {
+        .logo-menu-wrap {
+          .menu-box-wrapper {
+            .second-line {
+              //margin-right: 14%;
+              nav {
+                 
+                  width: 100%;
+                  .left-box{
+                      .left-menu{
+                          li {
+                              margin: 0 10px;
+                          }
+                      }
+                  } 
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1199px) {
+    .ar {
+      header {
+        .header-section {
+          .logo-menu-wrap {
+            .menu-box-wrapper { 
+              .second-line {
+                margin-right: 0;
+                max-width: 100%;
+                nav {
+                  padding-right: 0;
+                  padding-left: 0;
+                  max-width: 100%;
+                  width: 100%;
+                  .right-box {
+                    .right-menu {
+                      li {
+                        margin-right: 15px;
+                      }
+                    }
+                  }
+                 
+                }
+              }
+            }
+            
+          }
+        }
+      }
+    }
+  }
+
+@media screen and (max-width:991px){
+  header{
+      .header-section{
+          .logo-menu-wrap{
+              .burger-menu-wrap{
+                  &.active {
+                      right: auto;
+                      left: 30px;
+                  }
+              }
+          }
+      }
+  }
+}
+  
+.ar {
+    .left-menu {
+        li {
+            &.dropdown {
+                .dropdown-menu {
+                    left: auto;
+                    right: 0;
+
+                    &::before {
+                        left: auto;
+                        right: 20px;
+                    }
+
+                    li {
+                        a {
+                            &:hover {
+                                padding-left: 20px;
+                                padding-right: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  

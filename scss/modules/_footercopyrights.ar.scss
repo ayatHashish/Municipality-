@@ -1,0 +1,36 @@
+﻿@import "footercopyrights";
+
+
+.ar {
+    .copyright-wrap{
+
+        .hotline{
+            i{
+                height: auto;
+            } 
+        } 
+             
+  
+        .bottom-links{
+            li{
+              &::after{
+                  right: auto; 
+                  left: -18px;
+              }
+            }
+       }
+        
+    }  
+    
+    
+    
+    @media screen and (max-width:991px){
+    
+        .copyright-wrap{
+            .hotline{
+                float: none;
+                justify-content: center;
+            }
+        }
+    }
+}

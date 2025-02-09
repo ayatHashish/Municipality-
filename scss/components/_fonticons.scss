@@ -1,0 +1,89 @@
+
+$fontversion: '5cjmnn';
+
+@font-face {
+  font-family: 'icon';
+  src:  url('#{$iconsFontPath}/bricons.eot?#{$fontversion}');
+  src:  url('#{$iconsFontPath}/bricons.eot?#{$fontversion}#iefix') format('embedded-opentype'),
+        url('#{$iconsFontPath}/bricons.ttf?#{$fontversion}') format('truetype'),
+        url('#{$iconsFontPath}/bricons.woff?#{$fontversion}') format('woff'),
+        url('#{$iconsFontPath}/bricons.svg?#{$fontversion}#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+  [class^="br-"], [class*=" br-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+.br-arrowNtail-left-ic:before {
+  content: "\e900";
+}
+.br-arrowNtail-right-ic:before {
+  content: "\e901";
+}
+.br-hold:before {
+  content: "\e907";
+}
+.br-compony:before {
+  content: "\e913";
+}
+.br-accessipility:before {
+  content: "\e902";
+}
+.br-achevments:before {
+  content: "\e903";
+}
+.br-down-arrow:before {
+  content: "\e904";
+}
+.br-events:before {
+  content: "\e905";
+}
+.br-facebook:before {
+  content: "\e906";
+}
+.br-home:before {
+  content: "\e908";
+}
+.br-info:before {
+  content: "\e909";
+}
+.br-instagram:before {
+  content: "\e90a";
+}
+.br-lang:before {
+  content: "\e90b";
+}
+.br-light:before {
+  content: "\e90d";
+}
+.br-news:before {
+  content: "\e90e";
+}
+.br-parteners:before {
+  content: "\e90f";
+}
+.br-search:before {
+  content: "\e911";
+}
+.br-user:before {
+  content: "\e912";
+}
+.br-X:before {
+  content: "\e914";
+}
+.br-youtube:before {
+  content: "\e915";
+}
