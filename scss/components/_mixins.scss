@@ -150,13 +150,8 @@
     transition: all 0.3s ease;
     animation: pulse 2s infinite;
 
-    &:hover {
-        // transform: scale(1.05);
-        
-        i {
-            transform: rotate(180deg);
-        }
-    }
+
+    
 }
 
 .btn-more {

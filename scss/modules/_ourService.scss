@@ -1,6 +1,4 @@
 
-
-
 .services-card {
     height: 36rem;
     border-radius: 10px;
@@ -49,7 +47,6 @@
       opacity: 0;
       max-width: 80%;
       inset: auto auto 11rem 1.5rem;
-      // text-align: justify;
       transition: opacity .3s ease-out;
     }
     
@@ -59,8 +56,23 @@
       font-size: 1.125rem;
       font-weight: 530;
 
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: $brand-green;
+        transition-duration: 300ms;
     }
-    
+    &:hover {
+        color:$brand-green;
+        &::after {
+            width: 100%;
+        }
+    }
+  }
     .service-link {
       position: absolute;
       inset: auto 45px 40px auto;
@@ -96,8 +108,7 @@
     }
     
     &:hover .card-heading {
-      // inset: auto auto 15.69rem 7rem;
-      // inset: auto auto 15.69rem 1rem;
+     
       inset: auto auto 25rem 1.5rem;
       transition: inset .3s ease-out;
     }
@@ -118,8 +129,6 @@
 
   @media only screen and (max-width: 450px) {
     .services-card {
-
-      
       .service-dis{
         font-size: 0.9rem;
         inset: auto auto 11rem 1.5rem;

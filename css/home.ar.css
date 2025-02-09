@@ -120,8 +120,6 @@
   gap: 8px;
   transition: all 0.3s ease;
   animation: pulse 2s infinite; }
-  .view-details:hover i {
-    transform: rotate(180deg); }
 
 .btn-more {
   position: relative;
@@ -952,8 +950,6 @@ button:focus {
   gap: 8px;
   transition: all 0.3s ease;
   animation: pulse 2s infinite; }
-  .view-details:hover i {
-    transform: rotate(180deg); }
 
 .btn-more {
   position: relative;
@@ -2650,6 +2646,19 @@ header .banner-section {
     color: #FFF;
     font-size: 1.125rem;
     font-weight: 530; }
+    .services-card .view-details::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: #76C045;
+      transition-duration: 300ms; }
+    .services-card .view-details:hover {
+      color: #76C045; }
+      .services-card .view-details:hover::after {
+        width: 100%; }
   .services-card .service-link {
     position: absolute;
     inset: auto 45px 40px auto;
@@ -2690,24 +2699,18 @@ header .banner-section {
     font-size: 0.9rem;
     inset: auto auto 11rem 1.5rem; } }
 .ar .services-card .card-heading {
-  inset: auto auto 6rem 11rem !important; }
+  inset: auto 1rem 6rem auto; }
 .ar .services-card .service-dis, .ar .services-card .view-details {
-  inset: auto auto 11rem 1.5rem; }
+  inset: auto 1.5rem 11rem auto; }
 .ar .services-card .view-details {
-  inset: 28rem auto auto 1.5rem; }
+  inset: 28rem 1.5rem auto auto; }
 .ar .services-card .service-link {
-  inset: auto 45px 40px auto;
-  text-align: left;
-  /* محاذاة النص لليسار في الفئة العربية */ }
-  .ar .services-card .service-link::after {
-    right: 0;
-    /* تعديل الحافة بناءً على الاتجاه من اليمين لليسار */ }
+  inset: auto auto 40px 45px; }
 .ar .services-card:hover .card-heading {
-  inset: auto auto 25rem 1.5rem;
+  inset: auto 1.5rem 25rem auto;
   transition: inset .3s ease-out; }
 @media only screen and (max-width: 450px) {
   .ar .services-card .service-dis {
-    font-size: 0.9rem;
-    inset: auto auto 11rem 1.5rem; } }
+    inset: auto 1.5rem 11rem auto; } }
 
 /*# sourceMappingURL=home.ar.css.map */

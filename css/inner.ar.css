@@ -120,8 +120,6 @@
   gap: 8px;
   transition: all 0.3s ease;
   animation: pulse 2s infinite; }
-  .view-details:hover i {
-    transform: rotate(180deg); }
 
 .btn-more {
   position: relative;
@@ -954,8 +952,6 @@ button:focus {
   gap: 8px;
   transition: all 0.3s ease;
   animation: pulse 2s infinite; }
-  .view-details:hover i {
-    transform: rotate(180deg); }
 
 .btn-more {
   position: relative;
@@ -2691,26 +2687,20 @@ header .banner-section {
   .services-card .service-dis {
     font-size: 0.9rem;
     inset: auto auto 11rem 1.5rem; } }
-.ar .services-card .services-card .card-heading {
-  inset: auto auto 6rem 11rem !important; }
-.ar .services-card .services-card .service-dis, .ar .services-card .services-card .view-details {
-  inset: auto auto 11rem 1.5rem; }
-.ar .services-card .services-card .view-details {
-  inset: 28rem auto auto 1.5rem; }
-.ar .services-card .services-card .service-link {
-  inset: auto 45px 40px auto;
-  text-align: left;
-  /* محاذاة النص لليسار في الفئة العربية */ }
-  .ar .services-card .services-card .service-link::after {
-    right: 0;
-    /* تعديل الحافة بناءً على الاتجاه من اليمين لليسار */ }
-.ar .services-card .services-card:hover .card-heading {
-  inset: auto auto 25rem 1.5rem;
+.ar .services-card .card-heading {
+  inset: auto 1rem 6rem auto; }
+.ar .services-card .service-dis, .ar .services-card .view-details {
+  inset: auto 1.5rem 11rem auto; }
+.ar .services-card .view-details {
+  inset: 28rem 1.5rem auto auto; }
+.ar .services-card .service-link {
+  inset: auto auto 40px 45px; }
+.ar .services-card:hover .card-heading {
+  inset: auto 1.5rem 25rem auto;
   transition: inset .3s ease-out; }
 @media only screen and (max-width: 450px) {
   .ar .services-card .service-dis {
-    font-size: 0.9rem;
-    inset: auto auto 11rem 1.5rem; } }
+    inset: auto 1.5rem 11rem auto; } }
 
 .breadcrumbs-wrapper {
   margin: 34px auto 0 auto;

@@ -3,36 +3,40 @@
 .ar {
 
     .services-card {
+ 
+
       .card-heading {
-        inset: auto auto 6rem 11rem !important;
+        inset: auto 1rem 6rem auto;
       }
-      .service-dis, .view-details {
-        inset: auto auto 11rem 1.5rem;
+      .service-dis, .view-details{
+    
+        inset: auto 1.5rem 11rem auto;
+
       }
       
       .view-details {
-        inset: 28rem auto auto 1.5rem;
+        inset: 28rem 1.5rem auto auto;
+
       }
       .service-link {
-        inset: auto 45px 40px auto;
-        text-align: left; /* محاذاة النص لليسار في الفئة العربية */
 
-        &::after {
-          right: 0; /* تعديل الحافة بناءً على الاتجاه من اليمين لليسار */
-        }
+        inset: auto auto 40px 45px;
       }
       
       &:hover .card-heading {
-        inset: auto auto 25rem 1.5rem;
+        inset: auto 1.5rem 25rem auto;
         transition: inset .3s ease-out;
       }
+      
+   
+    
     }
   
   @media only screen and (max-width: 450px) {
     .services-card {
-      .service-dis {
-        font-size: 0.9rem;
-        inset: auto auto 11rem 1.5rem;
+      .service-dis{
+    
+        inset: auto 1.5rem 11rem auto;
       }
     }
   }
