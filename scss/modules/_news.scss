@@ -1,0 +1,146 @@
+﻿// General News Page Styles
+// .news-page {
+     .our-news {
+            padding-top: 2rem;
+
+            .main-title {
+                color: #115846;
+                font-size: 36px;
+                font-weight: 700;
+            }
+            .news-item {
+                background: white;
+                // border: 1px solid #dee2e6;
+                border-radius: 16px;
+                box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.25);
+                overflow: hidden;
+                transition: transform 0.8s ease, transform 0.8s ease 0.2s; 
+                &:hover {
+                    transform: scale(1.05);
+                    img {
+                        transform: scale(1.1);
+                        transition: transform 0.8s ease;
+                    }
+                }
+                .news-container-image {
+                 height: 272px;;
+
+                    img {
+                        border-radius: 16px;
+                        border-bottom-left-radius: unset;
+                        border-bottom-right-radius: unset;
+                        transition: transform 0.8s ease 0.2s; 
+                    }
+
+                    &:hover img {
+                        transform: scale(1.1);
+                    }
+                }
+                .news-content {
+                    font-size: 22px;
+                    color: #115846;
+                    // padding: 26px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.64rem;
+                    padding: 3.76rem 2.98rem 2rem;
+                    .date-news {
+                        color: #828282;
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+
+                    .news-description {
+                        color: #017366;
+                        font-size: 1.25rem;
+                        font-weight: 530;
+                        line-height: 1.5rem; 
+                        overflow: hidden;
+                        transition: 0.3s;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        min-height: 100px;
+                        font-size: 20px;
+                    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                
+                }
+            
+            }
+      
+        }
+    
+// }
+
+
+// Responsive Styles
+@media (max-width: 991px) {
+    .news-header {
+        flex-direction: column;
+        align-items: start;
+        padding: 0 2rem;
+    }
+
+    .news,
+    .achievement,
+    .economic {
+        padding: 0 2rem !important;
+    }
+
+    .news .read-more,
+    .achievement .read-more,
+    .economic .read-more {
+        margin-bottom: 2rem;
+    }
+
+    .services .services-slider {
+        padding-inline-start: 0;
+    }
+
+    main .slider .slide {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .economic-wrapper {
+        flex-direction: column;
+    }
+
+    .website-card {
+        margin-inline: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-news .news-item {
+        flex: 0 1 calc(50% - 20px) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-news .news-item {
+        flex: 0 1 100% !important;
+    }
+}
+
+
+
+/*.img-news-home-container {
+    width: 31.125rem;
+    height: 19.25rem;
+
+    .news-content .main-card-content .annualPaymentAlert .img-news {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.6rem;
+        width: 100%;
+    }
+}
+
+*/

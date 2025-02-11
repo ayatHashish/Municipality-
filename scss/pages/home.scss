@@ -82,14 +82,14 @@
                                 color: $pure-white;
                                 border-radius: 50%;
                                 font-size: 1.7rem;
-                                transition: all 0.3s ease;
+                                // transition: all 0.1s ease;
                                 &::before {
                                     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
                                 }
                             }
                         }
                         &:hover {
-                            border: 2px solid $brand-light-gray;
+                            // border: 2px solid $pure-white;
                             transform: translateY(-2px); 
                         }
                     }
@@ -142,6 +142,10 @@
                         font-size: 1.25rem;
                         font-weight: 530;
                         line-height: 1.5rem;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -165,8 +169,16 @@
             }
         .blue {
             background: #3F968D;
-
             color: $pure-white;
+            border-radius: 15px;
+            border-bottom-left-radius: unset;
+
+
+
+            border-bottom-right-radius: 15px !important;
+            .btn-more ,.last-news-text{
+                color: $pure-white
+            };
             .last-news-body {
                 &::after {          
                     border-color: transparent transparent #3F968D transparent;
@@ -196,6 +208,12 @@
         .green {
             background:  #76C045;;
             color: $pure-white;
+            border-radius: 15px;
+            border-bottom-right-radius: unset;
+            border-bottom-left-radius: 15px;
+            .btn-more ,.last-news-text{
+                color: $pure-white
+            };
             .last-news-body {
                 &::after {          
                     border-color: transparent transparent #76C045 transparent;

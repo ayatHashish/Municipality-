@@ -1,5 +1,14 @@
 @import "home";
 
 .ar {
-    
+    .green {
+      
+        border-bottom-left-radius: unset !important;
+        border-bottom-right-radius: 15px;
+      
+    }
+    .blue {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: unset !important;
+}
 }

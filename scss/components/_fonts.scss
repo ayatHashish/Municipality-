@@ -7,19 +7,11 @@
      font-style: normal;
      font-display: swap;
 }
-// @font-face {
-//      font-family: $font-base-rtl;
-//      src: url('#{$FontPath}/TheSansArabic-Light.woff2') format('woff2'),
-//           url('#{$FontPath}/TheSansArabic-Light.woff') format('woff');
-//      font-weight: 300;
-//      font-style: normal;
-//      font-display: swap;
-//  }
-// @font-face {
-//      font-family: "TheSansArabic";
-//      src: url('#{$FontPath}/TheSansArabicLight.woff2') format('woff2'),
-//           url('#{$FontPath}/TheSansArabicLight.woff') format('woff');
-//      font-weight: 300;
-//      font-style: normal;
-//      font-display: swap;
-//  }
+@font-face {
+     font-family: $font-base-rtl;
+     src: url('#{$FontPath}/TheSansArabic/TheSansArabic-Light.woff2') format('woff2'),
+          url('#{$FontPath}/TheSansArabic/TheSansArabic-Light.woff') format('woff');
+     font-weight: 300;
+     font-style: normal;
+     font-display: swap;
+ }

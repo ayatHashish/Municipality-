@@ -51,7 +51,6 @@
 }
 }
 
-
 @mixin btn-service {
     @include button-styles($brand-green,$pure-white, $brand-green, $pure-white);
 
@@ -81,12 +80,12 @@
   }
   
 
-@mixin button-primary {
-  @include button-styles($brand-primary, $pure-white, $brand-green, $pure-white);
-}
-@mixin button-secondary {
-  @include button-styles($brand-green, $pure-white, $brand-primary, $pure-white);
-}
+// @mixin button-primary {
+//   @include button-styles($brand-primary, $pure-white, $brand-green, $pure-white);
+// }
+// @mixin button-secondary {
+//   @include button-styles($brand-green, $pure-white, $brand-primary, $pure-white);
+// }
 @mixin button-border {
   @include button-styles(transparent, $pure-white, $brand-green, $pure-white, $pure-white);
 
@@ -134,12 +133,8 @@
     }
 }
 
-.btn-more{
-    color: #FFF;
-    font-size: 1.125rem;
-    font-weight: 530;
- 
-}
+
+
 
 //tooltip customize ends
 
@@ -154,7 +149,10 @@
     
 }
 
-.btn-more {
+@mixin btn-more {
+    color: #017366;
+    font-size: 1.125rem;
+    font-weight: 530;
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -167,7 +165,7 @@
         transition: transform 0.3s ease;
     }
     &:hover {
-        color: white; 
+        color: #000; 
 
         &::before {
             opacity: 0.1; 
@@ -178,6 +176,11 @@
         }
     }
 }
+
+.btn-more {
+    @include btn-more;
+}
+
 
 // Tooltip Design
 .tooltip {
@@ -222,11 +225,6 @@
         opacity: 1;
     }
 }
-
-
-
-
-
 
 .owl-dots {
     text-align: center;
@@ -327,14 +325,14 @@
     }
 }
 
-@media screen and (max-width:575px) {
-    .view-all {
-        font-size: 1rem;
+// @media screen and (max-width:575px) {
+//     .view-all {
+//         font-size: 1rem;
 
-    }
+//     }
 
-    @mixin btn-action {
-        @include button-styles($brand-green,$pure-white, $brand-green, $pure-white );
-    }
+//     @mixin btn-action {
+//         @include button-styles($brand-green,$pure-white, $brand-green, $pure-white );
+//     }
     
-}
+// }

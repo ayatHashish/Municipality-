@@ -82,7 +82,7 @@ $(document).ready(function(){
     });
     $(".latest-news-slider").owlCarousel({
         ...commonSettings,
-        items: 3, 
+        items: 1, 
         loop: true, 
         dots: true,     
         dotsEach: true, 
@@ -99,6 +99,42 @@ $(document).ready(function(){
             },
             991: {
                 items: 2,
+            },  
+            1340:{
+                items: 1,
+            },
+            1400: {
+                items: 1,
+            },
+            1537: {
+                items: 1,
+            },
+        },
+    });
+
+    $(".event-slider").owlCarousel({
+        ...commonSettings,
+        items: 3, 
+        loop: true, 
+        margin: 24,
+        dots: true,     
+        dotsEach: true, 
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            575: {
+                items: 1,
+            },
+            767: {
+                items: 1,
+            },
+            991: {
+                items: 2,
+            },
+            1340:{
+                items: 3,
             },
             1400: {
                 items: 3,
@@ -108,6 +144,8 @@ $(document).ready(function(){
             },
         },
     });
+
+
     $(".quality-numbers-slider").owlCarousel({
         ...commonSettings,
         items: 5, 
@@ -138,6 +176,9 @@ $(document).ready(function(){
                 items: 3,
                 center: true
             },
+            1340:{
+                items: 4,
+            },
             1400: {
                 items: 5,
                 margin:100, 
@@ -151,36 +192,36 @@ $(document).ready(function(){
 
         
     });
-    function animateCounter(element, start, end, duration) {
-        let range = end - start;
-        let stepTime = Math.abs(Math.floor(duration / range));
-        let startTime = new Date().getTime();
-        let endTime = startTime + duration;
-        let timer;
+    // function animateCounter(element, start, end, duration) {
+    //     let range = end - start;
+    //     let stepTime = Math.abs(Math.floor(duration / range));
+    //     let startTime = new Date().getTime();
+    //     let endTime = startTime + duration;
+    //     let timer;
       
-        function run() {
-          let now = new Date().getTime();
-          let remaining = Math.max((endTime - now) / duration, 0);
-          let value = Math.round(end - (remaining * range));
+    //     function run() {
+    //       let now = new Date().getTime();
+    //       let remaining = Math.max((endTime - now) / duration, 0);
+    //       let value = Math.round(end - (remaining * range));
           
-          element.innerHTML = value;
+    //       element.innerHTML = value;
       
-          if (value === end) {
-            clearInterval(timer);
-            element.innerHTML = value + '+' ; 
-          }
-        }
+    //       if (value === end) {
+    //         clearInterval(timer);
+    //         element.innerHTML = value + '+' ; 
+    //       }
+    //     }
       
-        timer = setInterval(run, stepTime);
-        run();
-    }
-    document.querySelectorAll('.counter').forEach(counter => {
-        let startValue = parseInt(counter.getAttribute('data-start'), 10);
-        let endValue = parseInt(counter.getAttribute('data-end'), 10);
-        let duration = parseInt(counter.getAttribute('data-duration'), 10);
+    //     timer = setInterval(run, stepTime);
+    //     run();
+    // }
+    // document.querySelectorAll('.counter').forEach(counter => {
+    //     let startValue = parseInt(counter.getAttribute('data-start'), 10);
+    //     let endValue = parseInt(counter.getAttribute('data-end'), 10);
+    //     let duration = parseInt(counter.getAttribute('data-duration'), 10);
         
-        animateCounter(counter, startValue, endValue, duration);
-    });
+    //     animateCounter(counter, startValue, endValue, duration);
+    // });
 
 
 
@@ -251,3 +292,57 @@ $(document).ready(function(){
 //           });
 //       });
 //   });
+
+
+
+
+function animateCounter(element, start, end, duration) {
+    let range = end - start;
+    let stepTime = Math.abs(Math.floor(duration / range));
+    let startTime = new Date().getTime();
+    let endTime = startTime + duration;
+    let timer;
+
+    function run() {
+        let now = new Date().getTime();
+        let remaining = Math.max((endTime - now) / duration, 0);
+        let value = Math.round(end - (remaining * range));
+
+        element.innerHTML = value;
+
+        if (value === end) {
+            clearInterval(timer);
+            element.innerHTML = value + '+'; 
+        }
+    }
+
+    timer = setInterval(run, stepTime);
+    run();
+}
+
+
+function startCountersOnScroll() {
+    const counters = document.querySelectorAll('.counter');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // العنصر في نطاق العرض، نبدأ العد
+                const counter = entry.target;
+                let startValue = parseInt(counter.getAttribute('data-start'), 10);
+                let endValue = parseInt(counter.getAttribute('data-end'), 10);
+                let duration = parseInt(counter.getAttribute('data-duration'), 10);
+
+                animateCounter(counter, startValue, endValue, duration);
+                observer.unobserve(counter); // إيقاف المراقبة بعد بدء العد
+            }
+        });
+    }, { threshold: 0.5 }); // تحديد أن العنصر يظهر بنسبة 50% على الأقل
+
+    counters.forEach(counter => {
+        observer.observe(counter); // مراقبة العنصر
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', startCountersOnScroll);
