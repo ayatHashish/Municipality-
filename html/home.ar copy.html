@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ar-GB" class="" xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--Start SEO TAGS-->
+    <title>honst </title>
+    <meta name="description" content="Future Internet iCMS Website." />
+    <meta name="author" content="Future Internet" />
+    <meta name="revisit-after" content="2 days" />
+    <meta name="robots" content="index, follow" />
+    <!--End SEO TAGS-->
+    <!--Start Fav Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="144x144" href="../favicons/android-icon-144x144.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-icon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-icon-72x72.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-icon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-icon-36x36.png" />
+
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png" />
+
+    <link rel="icon" href="../favicons/favicon.ico" />
+    <link rel="icon" href="../favicons/favicon.svg" type="image/svg+xml" />
+
+    <link rel="manifest" href="../favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--End Fav Icons-->
+    <!--Start CSS-->
+<!-- CSS for Owl Carousel -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+    <link href="../css/inner.en.css" rel="stylesheet" />
+    <!--End CSS-->
+</head>
+
+
+<style>
+
+header{
+    position: relative; 
+
+    background-position: center;
+    height: 100vh; 
+}
+.overlay {
+    position: absolute; /* وضع التدرج فوق الصورة */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(200deg, #017366 -60.97%, #3F968D 24.29%, #6CBE4B 96.29%); /* التدرج */
+    z-index: 1;
+    opacity: 0.2; 
+}
+header .header-section .menu-box-wrapper {
+    border-top:1px solid rgba(180, 202, 195, 20%);
+}
+
+header .banner-section .banner-slider{
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: -10px;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.header-section{
+    position: absolute;
+    z-index: 4;
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 63.02%, rgba(0, 0, 0, 0) 100%); */
+    width: 100%;
+}
+
+/* .item-wrap img::after{
+    content: '';
+    background: linear-gradient(90deg, rgba(108,190,75,1) 0%, rgba(72,158,128,1) 34%, rgba(63,150,141,1) 43% ,rgba(1,115,102,1) 100%);
+    height: 50%;
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+} */
+
+
+.banner-section{
+   position: relative;
+    height: 100vh;
+}
+
+.banner-section img::after{
+    content: '';
+    background: linear-gradient(90deg, rgba(108,190,75,1) 0%, rgba(72,158,128,1) 34%, rgba(63,150,141,1) 43% ,rgba(1,115,102,1) 100%);
+    height: 50%;
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+header .banner-section .banner-slider .item .item-wrap .content-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6%;
+    width: 44%;
+}
+
+header .banner-section .banner-slider .item .item-wrap img {
+    object-fit: cover;
+}
+
+header .banner-section .banner-slider .item .item-wrap {
+    height: 100vh;
+    display: flex;
+}
+</style>
+<body class="ar">
+    <div data-icms-viewport="viewport">
+        <header class="header test" data-icms-placeholder="header">
+            <section class="header-section">
+                <div class="logo-menu-wrap">
+                    <div class="container-fluid">
+                        <div class="first-line">
+                            <a href="#" class="logo-wrap" >
+                                <img src="../images/Logos/main-logo.svg" alt="Trust-logo" class="logo" data-toggle="tooltip"
+                                    data-title="amanaa" />
+                            </a>
+                            <a href="#"  
+                            class="gov-logo">
+                            <img src="../images/Logos/logo.svg" alt="Materials-Laboratories"
+                                data-toggle="tooltip" title="Materials-Laboratories" />
+                            
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-box-wrapper" >
+                        <div class="container-fluid">
+                            <div class="second-line">
+                                <nav  class="navbar navbar-expand-lg ">
+                                    <div class="left-box" >
+                                        <a href="#" class="home-btn active" data-toggle="tooltip" title="home"><i
+                                                class="br-home"></i></a>
+                                            
+                                        <ul class="left-menu " id="menu">
+                                            <svg class="close-icon" id="closeMenu" xmlns="http://www.w3.org/2000/svg" width="26" height="29" viewBox="0 0 26 29" fill="#fff">
+                                                <path d="M17.7075 10.8003L14.4138 14.3429L17.7075 17.8856C17.8004 17.9855 17.8741 18.1042 17.9244 18.2348C17.9747 18.3654 18.0006 18.5054 18.0006 18.6468C18.0006 18.7882 17.9747 18.9282 17.9244 19.0588C17.8741 19.1894 17.8004 19.3081 17.7075 19.4081C17.6146 19.508 17.5043 19.5873 17.3829 19.6414C17.2615 19.6955 17.1314 19.7234 17 19.7234C16.8686 19.7234 16.7385 19.6955 16.6171 19.6414C16.4957 19.5873 16.3854 19.508 16.2925 19.4081L13 15.8641L9.70751 19.4081C9.6146 19.508 9.5043 19.5873 9.3829 19.6414C9.26151 19.6955 9.1314 19.7234 9.00001 19.7234C8.86861 19.7234 8.7385 19.6955 8.61711 19.6414C8.49572 19.5873 8.38542 19.508 8.29251 19.4081C8.1996 19.3081 8.12589 19.1894 8.07561 19.0588C8.02533 18.9282 7.99945 18.7882 7.99945 18.6468C7.99945 18.5054 8.02533 18.3654 8.07561 18.2348C8.12589 18.1042 8.1996 17.9855 8.29251 17.8856L11.5863 14.3429L8.29251 10.8003C8.10486 10.5984 7.99945 10.3245 7.99945 10.039C7.99945 9.75348 8.10486 9.47965 8.29251 9.27775C8.48015 9.07585 8.73464 8.96243 9.00001 8.96243C9.26537 8.96243 9.51987 9.07585 9.70751 9.27775L13 12.8217L16.2925 9.27775C16.3854 9.17778 16.4957 9.09848 16.6171 9.04438C16.7385 8.99028 16.8686 8.96243 17 8.96243C17.1314 8.96243 17.2615 8.99028 17.3829 9.04438C17.5043 9.09848 17.6146 9.17778 17.7075 9.27775C17.8004 9.37772 17.8741 9.4964 17.9244 9.62702C17.9747 9.75763 18.0006 9.89763 18.0006 10.039C18.0006 10.1804 17.9747 10.3204 17.9244 10.451C17.8741 10.5816 17.8004 10.7003 17.7075 10.8003ZM26 14.3429C26 17.1094 25.2376 19.8138 23.8091 22.114C22.3807 24.4143 20.3503 26.2071 17.9749 27.2658C15.5995 28.3245 12.9856 28.6015 10.4638 28.0618C7.94208 27.5221 5.6257 26.1899 3.80762 24.2337C1.98953 22.2775 0.751405 19.7851 0.249797 17.0718C-0.251811 14.3584 0.0056327 11.546 0.989572 8.99005C1.97351 6.43414 3.63975 4.24956 5.77759 2.71257C7.91543 1.17559 10.4288 0.355225 13 0.355225C16.4467 0.359141 19.7512 1.8341 22.1884 4.45645C24.6256 7.0788 25.9964 10.6343 26 14.3429ZM24 14.3429C24 12.002 23.3549 9.7137 22.1462 7.76733C20.9375 5.82095 19.2195 4.30394 17.2095 3.40812C15.1995 2.5123 12.9878 2.27791 10.854 2.7346C8.72022 3.19128 6.76021 4.31852 5.22183 5.97378C3.68345 7.62904 2.63581 9.73796 2.21137 12.0339C1.78693 14.3298 2.00477 16.7095 2.83733 18.8722C3.66989 21.0349 5.07979 22.8834 6.88873 24.184C8.69767 25.4845 10.8244 26.1786 13 26.1786C15.9164 26.1751 18.7123 24.927 20.7745 22.7081C22.8367 20.4892 23.9967 17.4808 24 14.3429Z" fill="#76C045"/>
+                                                </svg>
+                                            <li  class="nav-item"><a href="#" title="عن الامانه "> عن الامانه </a></li>
+                                            <li>
+                                                <div class="dropdown">
+                                                    <a title="الخدمات " class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        الخدمات 
+                                                        <!-- <i class="br-down-arrow"></i> -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M11.4694 17.0306L3.96944 9.53055C3.89976 9.46087 3.84449 9.37815 3.80678 9.2871C3.76906 9.19606 3.74965 9.09847 3.74965 8.99993C3.74965 8.90138 3.76906 8.8038 3.80678 8.71276C3.84449 8.62171 3.89976 8.53899 3.96944 8.4693C4.03913 8.39962 4.12185 8.34435 4.2129 8.30663C4.30394 8.26892 4.40152 8.24951 4.50007 8.24951C4.59862 8.24951 4.6962 8.26892 4.78724 8.30663C4.87829 8.34435 4.96101 8.39962 5.0307 8.4693L12.0001 15.4396L18.9694 8.4693C19.1102 8.32857 19.301 8.24951 19.5001 8.24951C19.6991 8.24951 19.89 8.32857 20.0307 8.4693C20.1714 8.61003 20.2505 8.80091 20.2505 8.99993C20.2505 9.19895 20.1714 9.38982 20.0307 9.53055L12.5307 17.0306C12.461 17.1003 12.3783 17.1556 12.2873 17.1933C12.1962 17.2311 12.0986 17.2505 12.0001 17.2505C11.9015 17.2505 11.8039 17.2311 11.7129 17.1933C11.6218 17.1556 11.5391 17.1003 11.4694 17.0306Z" fill="white"/>
+                                                        </svg>
+                                                    </a>
+                                                    <ul class="dropdown-menu custom-dropdown">
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#"> Request soil test report</a></li>
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#">Laboratory Accreditation Request</a></li>
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#">Request sample analysis</a></li>
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#">Request for material approval</a></li>
+                                                
+                                                    </ul>
+                                                </div>
+                                            </li>   
+                                            <li><a href="#" title="المركز الاعلامى ">المركز الاعلامى </a></li>
+                                            <li>
+
+                                                <div class="dropdown">
+                                                    <a title="البرنامج" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        البرنامج
+
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M11.4694 17.0306L3.96944 9.53055C3.89976 9.46087 3.84449 9.37815 3.80678 9.2871C3.76906 9.19606 3.74965 9.09847 3.74965 8.99993C3.74965 8.90138 3.76906 8.8038 3.80678 8.71276C3.84449 8.62171 3.89976 8.53899 3.96944 8.4693C4.03913 8.39962 4.12185 8.34435 4.2129 8.30663C4.30394 8.26892 4.40152 8.24951 4.50007 8.24951C4.59862 8.24951 4.6962 8.26892 4.78724 8.30663C4.87829 8.34435 4.96101 8.39962 5.0307 8.4693L12.0001 15.4396L18.9694 8.4693C19.1102 8.32857 19.301 8.24951 19.5001 8.24951C19.6991 8.24951 19.89 8.32857 20.0307 8.4693C20.1714 8.61003 20.2505 8.80091 20.2505 8.99993C20.2505 9.19895 20.1714 9.38982 20.0307 9.53055L12.5307 17.0306C12.461 17.1003 12.3783 17.1556 12.2873 17.1933C12.1962 17.2311 12.0986 17.2505 12.0001 17.2505C11.9015 17.2505 11.8039 17.2311 11.7129 17.1933C11.6218 17.1556 11.5391 17.1003 11.4694 17.0306Z" fill="white"/>
+                                                        </svg>
+                                                    </a>
+                                                    <ul class="dropdown-menu custom-dropdown">
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#"> Request soil test report</a></li>
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#">Laboratory Accreditation Request</a></li>
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#">Request sample analysis</a></li>
+                                                    <li><i class="br-arrowNtail-left-ic"></i><a class="dropdown-item" href="#">Request for material approval</a></li>
+                                                
+                                                    </ul>
+                                                </div>
+                                            
+                                    
+
+                                            </li>                
+                                            <li><a href="#" title="اتصل بنا">اتصل بنا </a></li>
+                                        </ul>
+                                            
+                                        <button class="navbar-toggler" id="burgerMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                            <div class="burger-menu-wrap">
+                                                <input id="burger" type="checkbox" />
+                                                <label for="burger">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="right-box" >
+                                        <ul class="right-menu">
+                                            <li>
+                                                <a href="#" class="arabic" data-toggle="tooltip" title="Language">
+                                               <i class="br-user"></i>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" data-toggle="tooltip" title="Settings">
+                                                    <i class="br-search"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-toggle="tooltip" title="Search">
+                                                    <i class="br-accessipility"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-toggle="tooltip" title="My Account">
+                                                    <i class="br-lang"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>   
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="banner-section" >
+                <div class="owl-carousel banner-slider ">
+                    <div class="item">
+                            <div class="item-wrap">
+                                <img src="../images/b1.png" class="desktop" alt="banner-image"
+                                    title="نحو حياة أفضل ومستقبل مستدام" />
+                                <img src="../images/banner2.png" class="mobile" alt="banner-image"
+                                    title="​نحو حياة أفضل ومستقبل مستدام" />
+                                <div class="content-wrap">
+                                    <h1>نحو حياة أفضل  <br>ومستقبل مستدام</h1>
+                            <p class="hero-text">
+                              نعمل على تحقيق التميز في الخدمات وتطوير البنية التحتية للأجيال القادمة.                      </p>
+                                    <a href="#" class="tooltipapplied btn-action" title="" data-toggle="tooltip" >
+                                        See More
+                                <i class="br-arrowNtail-left-ic"></i>
+                                    </a>
+                                </div>
+                            </div>
+                     </div> 
+                     <div class="item">
+                        <div class="item-wrap">
+                            <img src="../images/b2.png" class="desktop" alt="banner-image"
+                                title="نحو حياة أفضل ومستقبل مستدام" />
+                            <img src="../images/banner2.png" class="mobile" alt="banner-image"
+                                title="​نحو حياة أفضل ومستقبل مستدام" />
+                            <div class="content-wrap">
+                                <h1>نحو حياة أفضل  <br>ومستقبل مستدام</h1>
+                        <p class="hero-text">
+                          نعمل على تحقيق التميز في الخدمات وتطوير البنية التحتية للأجيال القادمة.                      </p>
+                                <a href="#" class="tooltipapplied btn-action" title="" data-toggle="tooltip" >
+                                    See More
+                            <i class="br-arrowNtail-left-ic"></i>
+                                </a>
+                            </div>
+                        </div>
+                 </div> 
+                </div>
+                <a class="hold" href="#" id="toggleSlider" title="Pause slider" data-toggle="tooltip">
+                    <i class="br-hold"></i>
+                </a>
+             </section>
+             <div class="overlay"></div>
+        </header>
+ 
+        <script src="../scripts/home.js"></script>
+        <!--Start JS-->
+        <script type="text/javascript">
+            var BER = {};
+            BER.languageCode = 'en-GB';
+            BER.isHomePage = true;
+            BER.enableDebug = false;
+        </script>
+        <!--End JS-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="./../scripts/jquery.min.js"></script>
+    <script src="./../scripts/owl.carousel.min.js"></script>
+    <script src="./../scripts/bootstrap.min.js"></script>
+
+    <script src="../../../content/scripts/require/require.js" data-main="../scripts/home.js"></script>
+
+    <script src="./../scripts/home.js"></script>
+    <script src="./../scripts/main.js"></script>
+
+</body>
+
+</html>

@@ -172,10 +172,7 @@
             color: $pure-white;
             border-radius: 15px;
             border-bottom-left-radius: unset;
-
-
-
-            border-bottom-right-radius: 15px !important;
+            border-bottom-right-radius: 15px ;
             .btn-more ,.last-news-text{
                 color: $pure-white
             };
@@ -208,7 +205,7 @@
         .green {
             background:  #76C045;;
             color: $pure-white;
-            border-radius: 15px;
+            border-radius: 30px;
             border-bottom-right-radius: unset;
             border-bottom-left-radius: 15px;
             .btn-more ,.last-news-text{

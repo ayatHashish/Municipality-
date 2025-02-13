@@ -3,7 +3,7 @@ $(document).ready(function(){
         rtl: $('body').hasClass('ar'),
         nav: true,
         navText: $('body').hasClass('ar') 
-        ?['<i class="br-arrowNtail-left-ic"></i>', '<i class="br-arrowNtail-right-ic"></i>']
+        ?['<i class="br-arrowNtail-right-ic"></i>', '<i class="br-arrowNtail-left-ic"></i>']
            :['<i class="br-arrowNtail-left-ic"></i>', '<i class="br-arrowNtail-right-ic"></i>'] ,
     };
     const $bannerSlider = $(".banner-slider").owlCarousel({
@@ -14,9 +14,9 @@ $(document).ready(function(){
         autoplayTimeout: 6000,
         autoplaySpeed: 6000,       
         smartSpeed: 1500,         
-        // autoplayHoverPause: true,  
-        // animateIn: 'fadeIn',       
-        // animateOut: 'fadeOut', 
+        autoplayHoverPause: true,  
+        animateIn: 'fadeIn',       
+        animateOut: 'fadeOut', 
         // navText: ['<', '>'],
         nav:true,   
         dots: false,

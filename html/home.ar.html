@@ -65,11 +65,94 @@
     <link href="../css/inner.ar.css" rel="stylesheet" />
     <!--End CSS-->
 </head>
+<style>
 
+    header{
+        position: relative; 
+    
+        background-position: center;
+        height: 100vh; 
+    }
+    .overlay {
+        position: absolute; /* وضع التدرج فوق الصورة */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(200deg, #017366 -60.97%, #3F968D 24.29%, #6CBE4B 96.29%); /* التدرج */
+        z-index: 1;
+        opacity: 0.2; 
+    }
+    header .header-section .menu-box-wrapper {
+        border-top:1px solid rgba(180, 202, 195, 20%);
+    }
+    
+    header .banner-section .banner-slider{
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: -10px;
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .header-section{
+        position: absolute;
+        z-index: 4;
+        /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 63.02%, rgba(0, 0, 0, 0) 100%); */
+        width: 100%;
+    }
+    
+    /* .item-wrap img::after{
+        content: '';
+        background: linear-gradient(90deg, rgba(108,190,75,1) 0%, rgba(72,158,128,1) 34%, rgba(63,150,141,1) 43% ,rgba(1,115,102,1) 100%);
+        height: 50%;
+        display: flex;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    } */
+    
+    
+    .banner-section{
+       position: relative;
+        height: 100vh;
+    }
+    
+    .banner-section img::after{
+        content: '';
+        background: linear-gradient(90deg, rgba(108,190,75,1) 0%, rgba(72,158,128,1) 34%, rgba(63,150,141,1) 43% ,rgba(1,115,102,1) 100%);
+        height: 50%;
+        display: flex;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+    header .banner-section .banner-slider .item .item-wrap .content-wrap {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 6%;
+        width: 44%;
+    }
+    
+    header .banner-section .banner-slider .item .item-wrap img {
+        object-fit: cover;
+    }
+    
+    header .banner-section .banner-slider .item .item-wrap {
+        height: 100vh;
+        display: flex;
+    }
+    </style>
 <body class="ar">
     <div data-icms-viewport="viewport">
-        <header class="header" data-icms-placeholder="header">
-            <!--Start Main Menu-->
+        <header class="header test" data-icms-placeholder="header">
             <section class="header-section">
                 <div class="logo-menu-wrap">
                     <div class="container-fluid">
@@ -186,30 +269,11 @@
 
                 </div>
             </section>
-            <!--End Main Menu-->
             <section class="banner-section" >
                 <div class="owl-carousel banner-slider ">
                     <div class="item">
-                        <div class="item-wrap">
-                            <img src="../images/banner2.png" class="desktop" alt="banner-image"
-                                title="نحو حياة أفضل ومستقبل مستدام" />
-                            <img src="../images/banner2.png" class="mobile" alt="banner-image"
-                                title="​نحو حياة أفضل ومستقبل مستدام" />
-                            <div class="content-wrap">
-                                <h1>نحو حياة أفضل  <br>ومستقبل مستدام</h1>
-                          <p class="hero-text">
-                          نعمل على تحقيق التميز في الخدمات وتطوير البنية التحتية للأجيال القادمة. </p>
-
-                                <a href="#" class="tooltipapplied btn-action " title="" data-toggle="tooltip" >
-                                 See More
-                                    <i class="br-arrowNtail-left-ic"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
                             <div class="item-wrap">
-                                <img src="../images/banner2.png" class="desktop" alt="banner-image"
+                                <img src="../images/b1.png" class="desktop" alt="banner-image"
                                     title="نحو حياة أفضل ومستقبل مستدام" />
                                 <img src="../images/banner2.png" class="mobile" alt="banner-image"
                                     title="​نحو حياة أفضل ومستقبل مستدام" />
@@ -224,39 +288,43 @@
                                 </div>
                             </div>
                      </div> 
+                     <div class="item">
+                        <div class="item-wrap">
+                            <img src="../images/b2.png" class="desktop" alt="banner-image"
+                                title="نحو حياة أفضل ومستقبل مستدام" />
+                            <img src="../images/banner2.png" class="mobile" alt="banner-image"
+                                title="​نحو حياة أفضل ومستقبل مستدام" />
+                            <div class="content-wrap">
+                                <h1>نحو حياة أفضل  <br>ومستقبل مستدام</h1>
+                        <p class="hero-text">
+                          نعمل على تحقيق التميز في الخدمات وتطوير البنية التحتية للأجيال القادمة.                      </p>
+                                <a href="#" class="tooltipapplied btn-action" title="" data-toggle="tooltip" >
+                                    See More
+                            <i class="br-arrowNtail-left-ic"></i>
+                                </a>
+                            </div>
+                        </div>
+                 </div> 
                 </div>
-                <!-- <a class="hold"id="toggleSlider"  href="#" title="Play or Puse" data-toggle="tooltip">
-                    <i class="br-hold br-user"></i> 
-                </a> -->
                 <a class="hold" href="#" id="toggleSlider" title="Pause slider" data-toggle="tooltip">
                     <i class="br-hold"></i>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <circle cx="19.8224" cy="19.8224" r="18.3224" stroke="white" stroke-width="3"/>
-                        </svg> -->
                 </a>
-                
-
              </section>
+             <div class="overlay"></div>
         </header>
         <main class="main" data-icms-placeholder="main">
             <div class="home-page">
                 <!--Start Module2-->
                 <section class="our-Services">
                         <div class="container-fluid">
-                            <div class="row align-items-center">
-                                <div class="col-lg-10 col-md-8 col-sm-9 col-12">
+                            <div class="d-flex justify-content-between align-items-baseline">
                                     <h2 class="title-wrapper">
                                         خدمتنا الإلكترونية
                                     </h2>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-sm-3 col-12">
-                                    <a href="#" class="tooltipapplied btn-service" title="" data-toggle="tooltip" >
+                                    <a href="#" class="tooltipapplied btn-service service-link-animation" title="" data-toggle="tooltip" >
                                         عرض كل الاخبار 
                                         <i class="br-arrowNtail-left-ic"></i>
-                                    </a>
-                                </div>
-
-                          
+                                    </a>                       
                             </div>
             
             <!-- Owl Carousel -->
@@ -487,8 +555,8 @@
                             </div>
 
                          
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-lg-7 col-sm-12">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                          
                                     <div class="tabs-wrap">
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                             <a href="javascript:void(0)" class="nav-link active" data-bs-toggle="tab"
@@ -520,14 +588,18 @@
                                     
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-12">
-                                    <a href="#" class="btn-news" title="View all latest-news" data-toggle="tooltip"
+
+                                    <!-- <a href="#" class="btn-news" title="View all latest-news" data-toggle="tooltip"
                                         data-aos="fade-up" data-aos-duration="1200" data-aos-delay="2100">
                                     عرض كل الاخبار
                                     <i class="br-arrowNtail-left-ic"></i>
-                                    </a>
-                                </div>
+                                    </a> -->
+
+                        
+                                    <a href="#" class="btn-news service-link-animation">
+                                        عرض كل الاخبار
+                                         <i class="br-arrowNtail-left-ic"></i>
+                                     </a>
                             </div>
                               <div class="row">
                                 <div class="col-lg-12">

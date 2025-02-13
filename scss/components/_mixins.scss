@@ -181,6 +181,61 @@
     @include btn-more;
 }
 
+.service-link-animation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 40px;
+    // background: linear-gradient(to right, $brand-primary, $brand-green);
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    i {
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color:$brand-green ;
+        opacity: 0.5;
+        // background: linear-gradient(to right, $brand-green, $brand-primary);
+        transition: left 0.3s ease;
+        z-index: 1;
+    }
+
+   
+    &:not(i) {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+
+        &::before {
+            left: 0;
+        }
+
+        i {
+            transform: rotate(360deg);
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+    }
+}
 
 // Tooltip Design
 .tooltip {
@@ -240,10 +295,10 @@
         width: 15px;
         height: 15px;
         display: inline-block;
-        margin: 0 5px;
+        margin: 0 0.5rem;
         span {
-            width: 15px;
-            height: 15px;
+            width: 1.17731rem;
+            height: 1.17731rem;
             background: #94B4AA;
             border-radius: 50%;
             display: block;
